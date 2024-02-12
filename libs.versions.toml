@@ -1,0 +1,15 @@
+[versions]
+ktx = "1.9.0"
+version-compose = "1.4.3"
+version-activity = "1.7.1"
+kotlin-serialization = "1.6.2"
+
+[libraries]
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "version-compose" }
+compose-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "version-compose" }
+compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "version-compose" }
+compose-foundation = { group = "androidx.compose.ui", name = "foundation", version.ref = "version-compose" }
+compose-material = { group = "androidx.compose.ui", name = "material", version.ref = "version-compose" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "version-activity" }
+kotlinx = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin-serialization" }
