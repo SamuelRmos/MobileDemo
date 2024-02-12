@@ -1,16 +1,16 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
-    kotlin("android")
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.kotlinAndroid)
 }
 
 android {
     namespace = "com.samuelrmos.mobiledemo.android"
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         applicationId = "com.samuelrmos.mobiledemo.android"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
@@ -18,7 +18,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
     packaging {
         resources {
@@ -45,7 +45,8 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.preview)
     implementation(libs.compose.foundation)
-    implementation(libs.compose.material)
     implementation(libs.activity.compose)
-    implementation(libs.kotlinx)
+    implementation(libs.compose.material3)
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.navigation.compose)
 }
