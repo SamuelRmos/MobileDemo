@@ -1,4 +1,4 @@
-package com.samuelrmos.mobiledemo.android
+package com.samuelrmos.mobiledemo.android.product
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
