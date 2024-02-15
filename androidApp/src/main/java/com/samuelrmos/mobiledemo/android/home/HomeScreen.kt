@@ -44,7 +44,7 @@ fun HomeScreen() {
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
                 items(
-                    items = requestState.getProducts().items,
+                    items = requestState.getProductList(),
                     key = { it.id }
                 ) {
                     ProductCard(product = it)

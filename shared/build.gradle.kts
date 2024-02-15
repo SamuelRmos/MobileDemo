@@ -45,6 +45,8 @@ kotlin {
         }
         commonTest.dependencies {
             implementation(kotlin("test"))
+            implementation(libs.mockk)
+            implementation(libs.ktor.client.mock)
         }
     }
 }
