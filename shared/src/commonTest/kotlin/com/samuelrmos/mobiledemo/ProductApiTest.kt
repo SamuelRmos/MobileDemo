@@ -5,7 +5,6 @@ import com.samuelrmos.mobiledemo.HttpClientMock.getHttpClientSuccess
 import com.samuelrmos.mobiledemo.kotlin.ProductApi
 import com.samuelrmos.mobiledemo.kotlin.RequestState
 import io.ktor.client.HttpClient
-import io.mockk.MockKAnnotations.init
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.last
 import kotlinx.coroutines.runBlocking
@@ -17,7 +16,6 @@ class ProductApiTest {
     private lateinit var productApi: ProductApi
 
     private fun setUp(httpClient: HttpClient) {
-        init(this, relaxed = true)
         productApi = ProductApi(httpClient)
     }
 
